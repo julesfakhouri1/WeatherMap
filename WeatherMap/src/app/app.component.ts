@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import {EnvironmentCheckComponent} from "./pages/environment-check/environment-check.component";
+import {HttpClientModule} from "@angular/common/http";
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterModule,
+    EnvironmentCheckComponent,
+    HttpClientModule,
+  ],
+  providers:[HttpClientModule]
 })
 export class AppComponent {
-  title = 'WeatherMap';
+  title = 'weatherMap';
 }

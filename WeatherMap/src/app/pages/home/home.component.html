@@ -1,0 +1,12 @@
+<div id="navbar">
+  <button id="history-button" (click)="toggleHistory()">
+    <i class="fas fa-history"></i>
+  </button>
+  <input type="text" id="addressInput" placeholder="Enter address" (keydown.enter)="searchAddress($event)" />
+  <button id="disconnect-button" (click)="disconnect()">
+    <i class="fas fa-sign-out-alt"></i>
+  </button>
+</div>
+<div id="map-container">
+  <app-map [showHistory]="showHistory"></app-map>
+</div>

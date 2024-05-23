@@ -1,0 +1,61 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 98%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#app-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#history-button, #disconnect-button {
+  margin-left: 15vw;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#history-button:hover, #disconnect-button:hover {
+  background-color: #357ae8;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+#history-button:active, #disconnect-button:active {
+  background-color: #2a65c7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#map-container {
+  position: absolute;
+  top: 60px; /* Adjust height to account for navbar */
+  width: 100%;
+  height: calc(100vh - 60px); /* Adjust height to account for navbar */
+}
+#addressInput {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+#addressInput:focus {
+  border-color: #007bff;
+}

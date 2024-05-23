@@ -1,0 +1,12 @@
+<div id="map-container">
+  <div id="map"></div>
+  <div id="history-pane" [class.hidden]="!showHistory">
+    <h2 class="seach-history-title">Search History</h2>
+    <ul>
+      <li *ngFor="let history of searchHistory" (click)="locateFromHistory(history)">
+        <strong>{{ history.address }}</strong><br>
+        <p>{{ convertToString(history.timestamp) }}</p><br>
+      </li>
+    </ul>
+  </div>
+</div>
